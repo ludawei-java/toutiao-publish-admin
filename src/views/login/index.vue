@@ -64,6 +64,10 @@ export default {
               type: 'success'
             })
             this.loginLoading = false
+            // 登录成功之后进行页面跳转
+            this.$router.push({
+              name: 'home'
+            })
           } else {
             this.$message.error('用户名或者密码错误！')
             this.loginLoading = false
